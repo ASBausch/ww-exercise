@@ -1,0 +1,89 @@
+@mixin vertical-align($position: relative) {
+  position: $position;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+@mixin callOut($color: white){
+  text-align: center;
+  color: $color;
+  font-size: 48px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 800;
+}
+
+//separate concerns once basic compiling is functional
+
+
+/* brand colors*/
+
+$darkGr: #2eab9c;
+
+
+/* positioning elements */
+
+$fullWidth: 100%;
+
+$inLine: inline-block;
+
+.vert {
+  @include vertical-align();
+}
+
+.center {
+  display: inline-block;
+  width: $fullWidth;
+  margin: auto;
+  background-color: blue;
+}
+
+
+/* single elements */
+
+.logo {
+  display: $inLine;
+}
+
+.nav {
+  display: $inLine;
+  float: right;
+}
+
+header {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  z-index: 1;
+  background-color: #191c1f;
+  width: $fullWidth;
+  height: 72px;
+  opacity: .80;
+}
+
+/* text elements */
+
+a {
+  color: white;
+  text-decoration: none;
+
+}
+
+a:hover {
+  color: $darkGr;
+}
+
+.callOut {
+  @include callOut();
+}
+
+/* page sections */
+
+.heroSection {
+  position: absolute;
+  top: 0px;
+  background-image: url("../img/office.png");
+  width: $fullWidth;
+  height:768px;
+}
