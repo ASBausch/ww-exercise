@@ -42,6 +42,16 @@ $base-font-size: 16px;
   width: $fullWidth
 }
 
+.textAnd {
+  width: 70%;
+  padding: 50px;
+}
+
+.caseWidth {
+  width: 80%;
+  color: white
+}
+
 /* base containers */
 
 html {
@@ -55,12 +65,7 @@ html {
 }
 
 .container {
-  display: -webkit-flex;
-  display: flex;
-  -webkit-align-items: center;
-  align-items: center;
-  -webkit-justify-content: center;
-  justify-content: center;
+  @include container()
 }
 
 .lgtgreen {
@@ -90,16 +95,10 @@ html {
   flex-flow: row wrap;
 }
 
-.section5 {
-  display: block;
-  width: 100%;
-}
-
 .section6 {
   @include container();
   -webkit-flex: 1;
   flex: 1;
-  flex-flow: row wrap;
 }
 
 /* header */
@@ -113,14 +112,23 @@ a:hover {
   color: $darkGreen;
 }
 
-.nav {
+li {
+  list-style: none;
   display: $inLine;
+  padding-right: 5px;
+}
+
+ul {
   float: right;
+  padding-top: 10px;
+  padding-right: 25px;
 }
 
 .logo {
   display: $inLine;
   float:left;
+  padding-top: 25px;
+  padding-left: 25px;
 }
 
 header {
@@ -137,22 +145,28 @@ header {
 /* text elements */
 
 .callOut {
-  @include callOut();
+  @include callOut($color: black, $weight: 400, $size: em(24px));
 }
 
 h1 {
   @include callOut($weight: 600, $size: em(40px));
   width: 50%;
   margin: $center;
+  padding-bottom: 60px;
 }
 
 h2 {
-  @include callOut($color: black)
+  @include callOut($color: black, $size: em(20px), $weight: 700);
 }
 
 p {
   font-family: $openSans;
+  font-size: em(16px);
+}
+
+.smaller {
   font-size: em(12px);
+  padding-bottom: 20px;
 }
 
 /* image elements */
@@ -162,7 +176,8 @@ p {
 }
 
 .caseLogo {
-  width:30%;
+  padding-bottom: 15px;
+  width:40%;
 }
 
 .empImg {
@@ -171,17 +186,25 @@ p {
 
 .smallImg {
   position: relative;
-  top:81px;
+  top:115px;
 }
 
 /* accordian elements */
 
 .firstDrop {
-  width: 80%;
+  width: 75%;
   background-color: $lightGreen;
   margin: $center;
   text-align: left;
-  border: solid 1px white;
+  border-top: solid 1px white;
+  padding: 10px 0px 10px 30px;
+  color: white;
+}
+
+.firstDropContent{
+  background-color: $grey;
+  border-top: none;
+  font-weight: 200;
 }
 
 /* button section */

@@ -9,6 +9,14 @@
 .textOnly {
   width: 100%; }
 
+.textAnd {
+  width: 70%;
+  padding: 50px; }
+
+.caseWidth {
+  width: 80%;
+  color: white; }
+
 /* base containers */
 html {
   -webkit-background-size: auto;
@@ -64,10 +72,6 @@ html {
   flex: 2;
   flex-flow: row wrap; }
 
-.section5 {
-  display: block;
-  width: 100%; }
-
 .section6 {
   display: -webkit-flex;
   display: flex;
@@ -76,8 +80,7 @@ html {
   -webkit-justify-content: center;
   justify-content: center;
   -webkit-flex: 1;
-  flex: 1;
-  flex-flow: row wrap; }
+  flex: 1; }
 
 /* header */
 a {
@@ -87,13 +90,21 @@ a {
 a:hover {
   color: #2eab9c; }
 
-.nav {
+li {
+  list-style: none;
   display: inline-block;
-  float: right; }
+  padding-right: 5px; }
+
+ul {
+  float: right;
+  padding-top: 10px;
+  padding-right: 25px; }
 
 .logo {
   display: inline-block;
-  float: left; }
+  float: left;
+  padding-top: 25px;
+  padding-left: 25px; }
 
 header {
   position: fixed;
@@ -108,8 +119,8 @@ header {
 /* text elements */
 .callOut {
   text-align: center;
-  color: white;
-  font-size: 40px;
+  color: black;
+  font-size: 1.5em;
   font-family: "Open Sans", sans-serif;
   font-weight: 400; }
 
@@ -120,40 +131,53 @@ h1 {
   font-family: "Open Sans", sans-serif;
   font-weight: 600;
   width: 50%;
-  margin: 0 auto; }
+  margin: 0 auto;
+  padding-bottom: 60px; }
 
 h2 {
   text-align: center;
   color: black;
-  font-size: 40px;
+  font-size: 1.25em;
   font-family: "Open Sans", sans-serif;
-  font-weight: 400; }
+  font-weight: 700; }
 
 p {
   font-family: "Open Sans", sans-serif;
-  font-size: 0.75em; }
+  font-size: 1em; }
+
+.smaller {
+  font-size: 0.75em;
+  padding-bottom: 20px; }
 
 /* image elements */
 .twoUpImg {
   width: 100%; }
 
 .caseLogo {
-  width: 30%; }
+  padding-bottom: 15px;
+  width: 40%; }
 
 .empImg {
   width: 100%; }
 
 .smallImg {
   position: relative;
-  top: 81px; }
+  top: 115px; }
 
 /* accordian elements */
 .firstDrop {
-  width: 80%;
+  width: 75%;
   background-color: #35C0B1;
   margin: 0 auto;
   text-align: left;
-  border: solid 1px white; }
+  border-top: solid 1px white;
+  padding: 10px 0px 10px 30px;
+  color: white; }
+
+.firstDropContent {
+  background-color: #53595B;
+  border-top: none;
+  font-weight: 200; }
 
 /* button section */
 .button {
