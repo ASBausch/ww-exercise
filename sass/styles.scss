@@ -1,49 +1,116 @@
-@mixin vertical-align($position: relative) {
-  position: $position;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-@mixin callOut($color: white){
-  text-align: center;
-  color: $color;
-  font-size: 48px;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 800;
-}
-
-//separate concerns once basic compiling is functional
+@import "mixins";
 
 
-/* brand colors*/
 
-$darkGr: #2eab9c;
+/* brand colors */
+
+$darkGreen: #2eab9c;
+$lightGreen: #35C0B1;
+$grey: #53595B;
+$darkGrey: #191c1f;
+
+/* position test elements */
 
 
-/* positioning elements */
+/* position variables */
 
 $fullWidth: 100%;
-
 $inLine: inline-block;
+$center: 0 auto;
 
-.vert {
-  @include vertical-align();
+
+/* brand fonts */
+$openSans: 'Open Sans', sans-serif;
+$myriad: 'Myriad Pro', sans-serif;
+$base-font-size: 16px;
+
+@function em($px, $base: $base-font-size) {
+  @return ($px / $base) * 1em;
 }
 
-.center {
-  display: inline-block;
-  width: $fullWidth;
-  margin: auto;
-  background-color: blue;
+@function wd($px, $whole: 4625px) {
+  @return ($px / $whole) * 100%
 }
 
+/* alignment  */
 
-/* single elements */
+.centerText {
+  text-align: center;
+}
 
-.logo {
-  display: $inLine;
+.textOnly {
+  width: $fullWidth
+}
+
+/* base containers */
+
+html {
+  -webkit-background-size: auto;
+  -moz-background-size: auto;
+  -o-background-size: auto;
+  background-size: auto;
+  background-image:url('../img/office.png');
+  background-repeat:no-repeat;
+  background-position:top;
+}
+
+.container {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.lgtgreen {
+  background-color: $lightGreen;
+}
+
+.grey {
+  background-color: $grey;
+}
+
+.section1{
+  @include container();
+  height: 760px;
+}
+
+.section2 {
+  @include container();
+  -webkit-flex: 1;
+  flex: 1;
+  min-height: 558px;
+}
+
+.section3 {
+  @include container();
+  -webkit-flex: 2;
+  flex: 2;
+  flex-flow: row wrap;
+}
+
+.section5 {
+  display: block;
+  width: 100%;
+}
+
+.section6 {
+  @include container();
+  -webkit-flex: 1;
+  flex: 1;
+  flex-flow: row wrap;
+}
+
+/* header */
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: $darkGreen;
 }
 
 .nav {
@@ -51,39 +118,86 @@ $inLine: inline-block;
   float: right;
 }
 
+.logo {
+  display: $inLine;
+  float:left;
+}
+
 header {
   position: fixed;
   left: 0px;
   top: 0px;
   z-index: 1;
-  background-color: #191c1f;
-  width: $fullWidth;
+  background-color: $darkGrey;
+  width: 100%;
   height: 72px;
   opacity: .80;
 }
 
 /* text elements */
 
-a {
-  color: white;
-  text-decoration: none;
-
-}
-
-a:hover {
-  color: $darkGr;
-}
-
 .callOut {
   @include callOut();
 }
 
-/* page sections */
-
-.heroSection {
-  position: absolute;
-  top: 0px;
-  background-image: url("../img/office.png");
-  width: $fullWidth;
-  height:768px;
+h1 {
+  @include callOut($weight: 600, $size: em(40px));
+  width: 50%;
+  margin: $center;
 }
+
+h2 {
+  @include callOut($color: black)
+}
+
+p {
+  font-family: $openSans;
+  font-size: em(12px);
+}
+
+/* image elements */
+
+.twoUpImg {
+  width: 100%;
+}
+
+.caseLogo {
+  width:30%;
+}
+
+.empImg {
+  width:100%
+}
+
+.smallImg {
+  position: relative;
+  top:81px;
+}
+
+/* accordian elements */
+
+.firstDrop {
+  width: 80%;
+  background-color: $lightGreen;
+  margin: $center;
+  text-align: left;
+  border: solid 1px white;
+}
+
+/* button section */
+
+.button {
+  background-color: $lightGreen;
+  width: 20%;
+  margin: $center;
+  padding: em(1px);
+  text-align: center;
+  color: white;
+}
+
+
+
+
+
+
+

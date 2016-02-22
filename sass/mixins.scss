@@ -1,0 +1,30 @@
+@mixin vertical-align($position: relative) {
+  position: $position;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+@mixin callOut($color: white, $size: 40px, $font: $openSans, $weight: 400){
+  text-align: center;
+  color: $color;
+  font-size: $size;
+  font-family: $font;
+  font-weight: $weight;
+}
+
+@mixin container {
+    display: -webkit-flex;
+    display:         flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+//
+//@mixin lineUp($displayType: inline, $float: left, $width: 25%){
+//    display: $displayType;
+//    float: $float;
+//    width: $width;
+//}
