@@ -155,7 +155,7 @@ p {
 
 .caseLogo {
   padding-bottom: 15px;
-  width: 40%; }
+  width: 60%; }
 
 .empImg {
   width: 100%; }
@@ -179,6 +179,11 @@ p {
   border-top: none;
   font-weight: 200; }
 
+.triangle {
+  display: inline-block;
+  float: right;
+  padding: 10px 35px 0px 0px; }
+
 /* button section */
 .button {
   background-color: #35C0B1;
@@ -187,3 +192,11 @@ p {
   padding: 0.0625em;
   text-align: center;
   color: white; }
+
+.bottom {
+  padding: 60px 0 60px 0; }
+
+/* footer */
+footer {
+  background-image: url("../img/footerpattern.png");
+  height: 80px; }
