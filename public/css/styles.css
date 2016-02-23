@@ -28,7 +28,7 @@ html {
   -moz-background-size: auto;
   -o-background-size: auto;
   background-size: auto;
-  background-image: url("../img/office.png");
+  background-image: url("../img/designElementImages/office.png");
   background-repeat: no-repeat;
   background-position: top; }
 
@@ -197,5 +197,5 @@ p {
 
 /* footer */
 footer {
-  background-image: url("../img/footerpattern.png");
+  background-image: url("../img/designElementImages/footerpattern.png");
   height: 80px; }
