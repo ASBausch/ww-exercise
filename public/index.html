@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="app">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300, 400 ,600 ,700, 800' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
+    <script src="vendors/angular.js"></script>
+    <script src="app.js"></script>
 </head>
 <body>
 
@@ -86,7 +88,7 @@
         </div>
     </div>
 
-    <div class="section3">
+    <div class="section3" ng-controller="toggleController">
         <div class="textAnd">
             <h2>OUR VALUES</h2>
             <hr width = "18%">
@@ -94,16 +96,10 @@
 
         <!--all closed on load need to expand and orient arrow properly-->
 
-        <div class="firstDrop">
+        <div id="bar1" class="firstDrop" ng-click="onBarClick('bar1')">
             <p>WORK HARD <img class="triangle" src="img/designElementImages/triangle.png"></p>
         </div>
-        <div class="firstDrop">
-            <p>SUPPORT OUR TEAM <img class="triangle" src="img/designElementImages/triangle.png"></p>
-        </div>
-        <div class="firstDrop">
-            <p>BUILD COOL STUFF <img class="triangle" src="img/designElementImages/pointUp.png"></p>
-        </div>
-        <div class="firstDrop firstDropContent">
+        <div class="firstDrop firstDropContent" ng-show="isActive('bar1')"  ng-class="{active: isActive('bar1')}">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tempor
                 ullamcorper cursus. Vivamus quis vulputate erat, auctor auctor quam.
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tempor
@@ -113,7 +109,41 @@
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tempor
                 ullamcorper cursus. Vivamus quis vulputate erat, auctor auctor quam.
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tempor
-                ullamcorper cursus. Vivamus quis vulputate erat, auctor auctor quam.</p>
+                ullamcorper cursus. Vivamus quis vulputate erat, auctor auctor quam.
+            </p>
+        </div>
+        <div id="bar2" class="firstDrop" ng-click="onBarClick('bar2')">
+            <p>SUPPORT OUR TEAM <img class="triangle" src="img/designElementImages/triangle.png"></p>
+        </div>
+        <div class="firstDrop firstDropContent" ng-show="isActive('bar2')"  ng-class="{active: isActive('bar2')}">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tempor
+                ullamcorper cursus. Vivamus quis vulputate erat, auctor auctor quam.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tempor
+                ullamcorper cursus. Vivamus quis vulputate erat, auctor auctor quam.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tempor
+                ullamcorper cursus. Vivamus quis vulputate erat, auctor auctor quam.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tempor
+                ullamcorper cursus. Vivamus quis vulputate erat, auctor auctor quam.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tempor
+                ullamcorper cursus. Vivamus quis vulputate erat, auctor auctor quam.
+            </p>
+        </div>
+        <div id="bar3" class="firstDrop" ng-click="onBarClick('bar3')">
+            <p>BUILD COOL STUFF <img class="triangle" src="img/designElementImages/pointUp.png"></p>
+        </div>
+        <div class="firstDrop firstDropContent" ng-show="isActive('bar3')"  ng-class="{active: isActive('bar3')}">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tempor
+                ullamcorper cursus. Vivamus quis vulputate erat, auctor auctor quam.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tempor
+                ullamcorper cursus. Vivamus quis vulputate erat, auctor auctor quam.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tempor
+                ullamcorper cursus. Vivamus quis vulputate erat, auctor auctor quam.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tempor
+                ullamcorper cursus. Vivamus quis vulputate erat, auctor auctor quam.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tempor
+                ullamcorper cursus. Vivamus quis vulputate erat, auctor auctor quam.
+            </p>
+
         </div>
     </div>
 
