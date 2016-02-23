@@ -40,46 +40,55 @@ html {
   -webkit-justify-content: center;
   justify-content: center; }
 
-.section1 {
+.sectionA {
   display: -webkit-flex;
   display: flex;
   -webkit-align-items: center;
   align-items: center;
   -webkit-justify-content: center;
   justify-content: center;
+  flex-basis: 100%;
   height: 760px; }
 
-.section2 {
+.sectionB {
   display: -webkit-flex;
   display: flex;
   -webkit-align-items: center;
   align-items: center;
   -webkit-justify-content: center;
   justify-content: center;
-  -webkit-flex: 1;
-  flex: 1;
+  flex-basis: 100%;
   min-height: 558px; }
 
-.section3 {
+.sectionC {
   display: -webkit-flex;
   display: flex;
   -webkit-align-items: center;
   align-items: center;
   -webkit-justify-content: center;
   justify-content: center;
-  -webkit-flex: 2;
-  flex: 2;
+  flex-basis: 50%;
   flex-flow: row wrap; }
 
-.section6 {
+.sectionD {
   display: -webkit-flex;
   display: flex;
   -webkit-align-items: center;
   align-items: center;
   -webkit-justify-content: center;
   justify-content: center;
-  -webkit-flex: 1;
-  flex: 1; }
+  flex-basis: 25%;
+  flex-flow: row wrap; }
+
+.sectionE {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  flex-basis: 100%;
+  flex-flow: row wrap; }
 
 a {
   color: white;
@@ -198,4 +207,12 @@ p {
 /* footer */
 footer {
   background-image: url("../img/designElementImages/footerpattern.png");
-  height: 80px; }
+  height: 80px;
+  width: 100%; }
+
+.under {
+  background-color: #35C0B1; }
+
+.emgImgUnder {
+  opacity: .50;
+  width: 100%; }

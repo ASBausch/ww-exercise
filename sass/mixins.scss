@@ -11,7 +11,7 @@
 
 //main text callouts
 
-@mixin callOut($color: white, $size: 40px, $font: $openSans, $weight: 400){
+@mixin callOut($color: white, $size: 40px, $font: $mainFont, $weight: 400){
   text-align: center;
   color: $color;
   font-size: $size;
@@ -30,4 +30,9 @@
     justify-content: center;
 }
 
+//flew widths for content areas
 
+@mixin flex($cWidth: 100%) {
+  flex-basis: $cWidth;
+  flex-flow: row wrap;
+}

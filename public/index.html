@@ -26,7 +26,7 @@
 
 <main>
     <div class="container">
-    <div class="section1">
+    <div class="sectionA">
         <h1>Westwerk is a digitally forward agency driven by smart design
             <div class="smallImg">
                 <img src="img/designElementImages/W.png">
@@ -35,7 +35,7 @@
     </div>
     </div>
 
-    <div class="section2">
+    <div class="sectionB">
         <div class="textAnd">
             <h2>OUR PHILOSOPHY</h2>
             <hr width = "18%">
@@ -50,11 +50,11 @@
         </div>
     </div>
 
-    <div class="section3 lgtgreen">
-        <div class="section3">
+    <div class="sectionC lgtgreen">
+        <div class="sectionC">
             <img class="twoUpImg" src="img/contentImages/stadium.png">
         </div>
-        <div class="section3 centerText">
+        <div class="sectionC centerText">
             <img class="caseLogo" src="img/contentImages/boiselogo.png">
             <div class="caseWidth">
                 <p class="smaller">Website Design + Website Development</p>
@@ -66,7 +66,7 @@
     </div>
 
     <div class="container lgtgreen">
-        <div class="section3 centerText">
+        <div class="sectionC centerText">
             <img class="caseLogo" src="img/contentImages/rushriver.png">
             <div class="caseWidth">
                 <p class="smaller">Website Design + Website Development</p>
@@ -75,12 +75,12 @@
                 </p>
             </div>
         </div>
-        <div class="section3">
+        <div class="sectionC">
             <img class="twoUpImg" src="img/contentImages/beeredit.png">
         </div>
     </div>
 
-    <div class="section2 grey">
+    <div class="sectionB grey">
         <div class="textOnly">
             <h1>We're always looking for more <br>
                 good people.</h1>
@@ -88,7 +88,7 @@
         </div>
     </div>
 
-    <div class="section3" ng-controller="toggleController">
+    <div class="sectionC" ng-controller="toggleController">
         <div class="textAnd">
             <h2>OUR VALUES</h2>
             <hr width = "18%">
@@ -127,53 +127,33 @@
         </div>
     </div>
 
-    <div class="section3">
+    <div class="sectionC">
         <div class="textAnd">
             <h2>THE TEAM</h2>
             <hr width = "18%">
         </div>
     </div>
 
-<!--these need to be drawn from the json file -->
     <!--still needs hover and title text-->
-    <div class="section6">
-        <div class="section6">
-            <img class="empImg" src="img/employee_images/f-1.jpg">
+    <div class="sectionD" ng-controller="employeeController">
+        <div class="sectionD" ng-repeat="employee in employees | limitTo: limitLength">
+
+            <img class="empImg" src="img/employee_images/{{employee.image}}">
+                <span class="textContent">
+                     <span>{{employee.name.first +" "+employee.name.last + " " + employee.position}}</span>
+                </span>
+
         </div>
-        <div class="section6">
-            <img class="empImg" src="img/employee_images/m-1.jpg">
+
+    <div>
+        <div class="sectionE bottom">
+            <div>
+                <div class="button" ng-click="clickMore()" ng-hide="newLength >= length"><p>Load More</p></div>
+            </div>
         </div>
-        <div class="section6">
-            <img class="empImg" src="img/employee_images/f-2.jpg">
-        </div>
-        <div class="section6">
-            <img class="empImg" src="img/employee_images/m-2.jpg">
-        </div>
+
     </div>
-
-    <div class="section6">
-        <div class="section6">
-            <img class="empImg" src="img/employee_images/m-3.jpg">
-        </div>
-        <div class="section6">
-            <img class="empImg" src="img/employee_images/f-3.jpg">
-        </div>
-        <div class="section6">
-            <img class="empImg" src="img/employee_images/m-4.jpg">
-        </div>
-        <div class="section6">
-            <img class="empImg" src="img/employee_images/f-4.jpg">
-        </div>
-        </div>
-    <div class="textOnly bottom">
-
-        <!--these need to be draw finals from the json file -->
-        <div>
-            <div class="button"><p>Load More</p></div>
-        </div>
     </div>
-
-
 
     <footer>
         <div>
@@ -186,5 +166,6 @@
             </ul>
         </div>
     </footer>
+
 </main>
 </body>
