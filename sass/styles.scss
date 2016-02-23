@@ -1,15 +1,11 @@
 @import "mixins";
 
-
-
 /* brand colors */
 
 $darkGreen: #2eab9c;
 $lightGreen: #35C0B1;
 $grey: #53595B;
 $darkGrey: #191c1f;
-
-/* position test elements */
 
 
 /* position variables */
@@ -30,6 +26,16 @@ $base-font-size: 16px;
 
 @function wd($px, $whole: 4625px) {
   @return ($px / $whole) * 100%
+}
+
+//background colors
+
+.lgtgreen {
+  background-color: $lightGreen;
+}
+
+.grey {
+  background-color: $grey;
 }
 
 /* alignment  */
@@ -68,14 +74,6 @@ html {
   @include container()
 }
 
-.lgtgreen {
-  background-color: $lightGreen;
-}
-
-.grey {
-  background-color: $grey;
-}
-
 .section1{
   @include container();
   height: 760px;
@@ -101,7 +99,7 @@ html {
   flex: 1;
 }
 
-/* header */
+//text elements
 
 a {
   color: white;
@@ -123,6 +121,8 @@ ul {
   padding-top: 10px;
   padding-right: 25px;
 }
+
+/* header */
 
 .logo {
   display: $inLine;
@@ -212,7 +212,7 @@ p {
   float: right;
   padding: 10px 35px 0px 0px;
 }
-/* button section */
+/* buttons */
 
 .button {
   background-color: $lightGreen;
@@ -222,6 +222,8 @@ p {
   text-align: center;
   color: white;
 }
+
+//button placement
 
 .bottom {
   padding: 60px 0 60px 0;

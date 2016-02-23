@@ -1,3 +1,6 @@
+
+//vertical allignment - may not use
+
 @mixin vertical-align($position: relative) {
   position: $position;
   top: 50%;
@@ -6,6 +9,8 @@
   transform: translateY(-50%);
 }
 
+//main text callouts
+
 @mixin callOut($color: white, $size: 40px, $font: $openSans, $weight: 400){
   text-align: center;
   color: $color;
@@ -13,6 +18,8 @@
   font-family: $font;
   font-weight: $weight;
 }
+
+//flex containers to center horozontal and verticle
 
 @mixin container {
     display: -webkit-flex;

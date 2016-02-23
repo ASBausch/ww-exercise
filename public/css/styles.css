@@ -1,7 +1,12 @@
 /* brand colors */
-/* position test elements */
 /* position variables */
 /* brand fonts */
+.lgtgreen {
+  background-color: #35C0B1; }
+
+.grey {
+  background-color: #53595B; }
+
 /* alignment  */
 .centerText {
   text-align: center; }
@@ -34,12 +39,6 @@ html {
   align-items: center;
   -webkit-justify-content: center;
   justify-content: center; }
-
-.lgtgreen {
-  background-color: #35C0B1; }
-
-.grey {
-  background-color: #53595B; }
 
 .section1 {
   display: -webkit-flex;
@@ -82,7 +81,6 @@ html {
   -webkit-flex: 1;
   flex: 1; }
 
-/* header */
 a {
   color: white;
   text-decoration: none; }
@@ -100,6 +98,7 @@ ul {
   padding-top: 10px;
   padding-right: 25px; }
 
+/* header */
 .logo {
   display: inline-block;
   float: left;
@@ -184,7 +183,7 @@ p {
   float: right;
   padding: 10px 35px 0px 0px; }
 
-/* button section */
+/* buttons */
 .button {
   background-color: #35C0B1;
   width: 20%;
