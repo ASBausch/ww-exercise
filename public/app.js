@@ -34,13 +34,7 @@ app.controller("employeeController", ['$scope','$http', function($scope,$http) {
             $scope.newLength = $scope.limitLength;
         };
 
-        $scope.hoverIn = function(){
-            $scope.hoverEdit = true;
-        };
 
-        $scope.hoverOut = function(){
-            $scope.hoverEdit = false;
-        };
     });
 }]);
 

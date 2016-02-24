@@ -79,7 +79,6 @@ html {
   justify-content: center;
   flex-basis: 25%;
   flex-flow: row wrap;
-  cursor: pointer;
   position: relative; }
 
 .sectionE {
@@ -212,7 +211,8 @@ p {
   text-align: left;
   border-top: solid 1px white;
   padding: 10px 0px 10px 30px;
-  color: white; }
+  color: white;
+  cursor: pointer; }
 
 .firstDropContent {
   background-color: #53595B;
@@ -231,7 +231,8 @@ p {
   margin: 0 auto;
   padding: 0.0625em;
   text-align: center;
-  color: white; }
+  color: white;
+  cursor: pointer; }
 
 .bottomButton {
   background-color: #35C0B1;
@@ -271,6 +272,13 @@ footer {
     flex-flow: row wrap;
     cursor: pointer;
     position: relative; }
+  .caseLogo {
+    padding-top: 25px;
+    padding-bottom: 15px;
+    width: 60%; }
+  .twoUpImg {
+    width: 100%;
+    height: 282px; }
   .bottomButton {
     background-color: #35C0B1;
     width: 34%;
@@ -299,4 +307,16 @@ footer {
     -webkit-justify-content: center;
     justify-content: center;
     flex-basis: 100%;
-    flex-flow: row wrap; } }
+    flex-flow: row wrap;
+    border-bottom: 2px solid white; }
+  .smaller {
+    font-size: 10px;
+    padding-bottom: 10px; }
+  .caseLogo {
+    padding-top: 25px;
+    padding-bottom: 15px;
+    width: 60%; }
+  a {
+    color: white;
+    text-decoration: none;
+    font-size: 12px; } }
