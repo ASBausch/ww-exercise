@@ -261,6 +261,45 @@ footer {
   text-align: center; }
 
 @media only screen and (max-width: 868px) {
+  html {
+    -webkit-background-size: auto;
+    -moz-background-size: auto;
+    -o-background-size: auto;
+    background-size: auto;
+    background-image: url("../img/designElementImages/officeAlt.png");
+    background-repeat: no-repeat;
+    background-position: top; }
+  h1 {
+    text-align: center;
+    color: white;
+    font-size: 2.1875em;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    width: 50%;
+    margin: 0 auto;
+    padding-top: 80px; }
+  .smallImg {
+    position: relative;
+    top: 70px;
+    margin-bottom: 30px; }
+  .sectionA {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    flex-basis: 100%;
+    height: 500px; }
+  .sectionB {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    flex-basis: 100%;
+    min-height: 200px; }
   .sectionD {
     display: -webkit-flex;
     display: flex;
@@ -279,6 +318,14 @@ footer {
   .twoUpImg {
     width: 100%;
     height: 282px; }
+  .button {
+    background-color: #35C0B1;
+    width: 50%;
+    padding: 0.0625em;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 80px; }
   .bottomButton {
     background-color: #35C0B1;
     width: 34%;
@@ -288,6 +335,32 @@ footer {
     color: white; } }
 
 @media only screen and (max-width: 600px) {
+  html {
+    -webkit-background-size: auto;
+    -moz-background-size: auto;
+    -o-background-size: auto;
+    background-size: auto;
+    background-image: url("../img/designElementImages/officeAlt.png");
+    background-repeat: no-repeat;
+    background-position: top; }
+  .sectionA {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    flex-basis: 100%;
+    height: 450px; }
+  .sectionB {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    flex-basis: 100%;
+    min-height: 300px; }
   .sectionD {
     display: -webkit-flex;
     display: flex;
@@ -319,4 +392,30 @@ footer {
   a {
     color: white;
     text-decoration: none;
-    font-size: 12px; } }
+    font-size: 10px; }
+  h1 {
+    text-align: center;
+    color: white;
+    font-size: 1.5625em;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    width: 50%;
+    margin: 0 auto;
+    padding-top: 80px; }
+  .callOut {
+    text-align: center;
+    color: black;
+    font-size: 1.25em;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400; }
+  .smallImg {
+    position: relative;
+    top: 90px; }
+  .button {
+    background-color: #35C0B1;
+    width: 50%;
+    padding: 0.0625em;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 80px; } }
