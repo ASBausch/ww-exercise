@@ -34,7 +34,6 @@ app.controller("employeeController", ['$scope','$http', function($scope,$http) {
             $scope.newLength = $scope.limitLength;
         };
 
-
     });
 }]);
 

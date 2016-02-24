@@ -24,10 +24,6 @@ $base-font-size: 16px;
   @return ($px / $base) * 1em;
 }
 
-@function wd($px, $whole: 4625px) {
-  @return ($px / $whole) * 100%
-}
-
 //background colors
 
 .lgtgreen {
