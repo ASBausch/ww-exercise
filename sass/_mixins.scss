@@ -1,0 +1,50 @@
+//background properties
+
+@mixin backGround() {
+  -webkit-background-size: auto;
+  -moz-background-size: auto;
+  -o-background-size: auto;
+  background-size: auto;
+  background-repeat:no-repeat;
+  background-position:top;
+}
+
+//main text callouts
+
+@mixin callOut($color: white, $size: 40px, $font: $mainFont, $weight: 400, $width: 100%){
+  text-align: center;
+  color: $color;
+  font-size: $size;
+  font-family: $font;
+  font-weight: $weight;
+  width: $width;
+}
+
+//flex containers to center horizontal and vertical
+
+@mixin container {
+    display: -webkit-flex;
+    display:         flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+
+//flew widths for content areas
+
+@mixin flex($cWidth: 100%) {
+  flex-basis: $cWidth;
+  flex-flow: row wrap;
+}
+
+//standard button properties
+
+@mixin button($width: 20%){
+  width: $width;
+  background-color: $lightGreen;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+  padding: 1px;
+}

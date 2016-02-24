@@ -1,0 +1,64 @@
+@media only screen and (max-width: 868px) {
+
+  html {
+    @include backGround();
+    background-image:url('../img/designElementImages/officeAlt.png');
+  }
+
+  h1 {
+    @include callOut($weight: 600, $size: em(35px));
+    width: 50%;
+    margin: 0 auto;
+    padding-top: 80px;
+  }
+
+  .smallImg {
+    position: relative;
+    top:70px;
+    margin-bottom: 30px;
+  }
+
+  .sectionA{
+    @include container();
+    flex-basis: 100%;
+    height: 500px;
+  }
+
+  .sectionB {
+    @include container();
+    flex-basis: 100%;
+    min-height: 200px;
+  }
+
+  .sectionD {
+    @include container();
+    @include flex(33%);
+    position: relative;
+  }
+
+  .caseLogo {
+    padding-top: 25px;
+    padding-bottom: 15px;
+    width:60%;
+  }
+
+  .twoUpImg {
+    width: 100%;
+    height: 282px;
+  }
+
+  .button {
+    @include button(50%);
+    margin-bottom: 80px;
+  }
+
+  .bottomButton {
+    @include button(34%);
+    margin: 50px 0 50px 0;
+  }
+
+  .logoScale {
+    height: 50px;
+  }
+
+}

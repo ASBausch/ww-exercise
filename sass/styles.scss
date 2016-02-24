@@ -1,24 +1,5 @@
+@import "brandElements";
 @import "mixins";
-
-/* brand colors */
-
-$darkGreen: #2eab9c;
-$lightGreen: #35C0B1;
-$grey: #53595B;
-$darkGrey: #191c1f;
-
-
-/* position variables */
-
-$fullWidth: 100%;
-$inLine: inline-block;
-$center: 0 auto;
-
-
-/* brand fonts */
-$mainFont: 'Open Sans', sans-serif;
-$secondFont: 'Myriad Pro', sans-serif;
-$base-font-size: 16px;
 
 @function em($px, $base: $base-font-size) {
   @return ($px / $base) * 1em;
@@ -26,7 +7,7 @@ $base-font-size: 16px;
 
 //background colors
 
-.lgtgreen {
+.lgtGreen {
   background-color: $lightGreen;
 }
 
@@ -41,7 +22,7 @@ $base-font-size: 16px;
 }
 
 .textOnly {
-  width: $fullWidth
+  width: 100%;
 }
 
 .textAnd {
@@ -57,13 +38,8 @@ $base-font-size: 16px;
 /* base containers */
 
 html {
-  -webkit-background-size: auto;
-  -moz-background-size: auto;
-  -o-background-size: auto;
-  background-size: auto;
+  @include backGround();
   background-image:url('../img/designElementImages/office.png');
-  background-repeat:no-repeat;
-  background-position:top;
 }
 
 .container {
@@ -111,46 +87,23 @@ a:hover {
 
 li {
   list-style: none;
-  display: $inLine;
-  padding-right: 5px;
+  display: inline-block;
+  padding-right: 8px;
 }
 
 ul {
   float: right;
   padding-top: 10px;
-  padding-right: 25px;
+  padding-right: 40px;
 }
-
-/* header */
-
-.logo {
-  display: $inLine;
-  float:left;
-  padding-top: 25px;
-  padding-left: 25px;
-}
-
-header {
-  position: fixed;
-  left: 0px;
-  top: 0px;
-  z-index: 1;
-  background-color: $darkGrey;
-  width: 100%;
-  height: 72px;
-  opacity: .80;
-}
-
-/* text elements */
 
 .callOut {
-  @include callOut($color: black, $weight: 400, $size: em(24px));
+  @include callOut(black, em(24px),400);
 }
 
 h1 {
-  @include callOut($weight: 600, $size: em(40px));
-  width: 50%;
-  margin: $center;
+  @include callOut($weight: 600, $width: 50%);
+  margin: 0 auto;
   padding-bottom: 60px;
 }
 
@@ -159,8 +112,7 @@ h2 {
 }
 
 h3 {
-  @include callOut($color: white, $size: em(30px), $weight: 700);
-  width: 70%;
+  @include callOut($size: em(30px), $weight: 700, $width: 70%);
   margin: 0 auto;
   position: relative;
   top: 50%;
@@ -169,8 +121,7 @@ h3 {
 }
 
 h4 {
-  @include callOut($color: white, $size: em(16px), $weight: 300);
-  width: 70%;
+  @include callOut($size: em(16px), $weight: 300, $width: 70%);
   margin: 0 auto;
   position: relative;
   top: 47%;
@@ -187,6 +138,26 @@ p {
 .smaller {
   font-size: em(12px);
   padding-bottom: 20px;
+}
+
+/* header */
+
+.logo {
+  display: inline-block;
+  float:left;
+  padding-top: 25px;
+  padding-left: 40px;
+}
+
+header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  background-color: $darkGrey;
+  width: 100%;
+  height: 72px;
+  opacity: .90;
 }
 
 /* image elements */
@@ -210,18 +181,18 @@ p {
 
 .smallImg {
   position: relative;
-  top:115px;
+  top: 115px;
 }
 
-/* accordian elements */
+/* accordion elements */
 
 .firstDrop {
   width: 75%;
   background-color: $lightGreen;
-  margin: $center;
+  margin: 0 auto;
   text-align: left;
   border-top: solid 1px white;
-  padding: 10px 0px 10px 30px;
+  padding: 10px 0 10px 30px;
   color: white;
   cursor: pointer;
 }
@@ -235,32 +206,21 @@ p {
 .triangle {
   display: inline-block;
   float: right;
-  padding: 10px 35px 0px 0px;
+  padding: 10px 35px 0 0;
 }
+
+
 /* buttons */
 
 .button {
-  background-color: $lightGreen;
-  width: 20%;
-  margin: $center;
-  padding: em(1px);
-  text-align: center;
-  color: white;
-  cursor: pointer;
+  @include button();
+  margin: 0 auto;
 }
 
 .bottomButton {
-  background-color: $lightGreen;
-  width: 20%;
+  @include button();
   margin: 50px 0 50px 0;
-  padding: em(1px);
-  text-align: center;
-  color: white;
 }
-
-
-//button placement
-
 
 /* footer */
 
@@ -269,7 +229,6 @@ footer {
   height: 80px;
   width:100%;
 }
-
 
 /* hover effect */
 
@@ -285,167 +244,8 @@ footer {
   text-align: center;
 }
 
-//media queries
-
-//tablet
-
-@media only screen and (max-width: 868px) {
-
-  html {
-    -webkit-background-size: auto;
-    -moz-background-size: auto;
-    -o-background-size: auto;
-    background-size: auto;
-    background-image:url('../img/designElementImages/officeAlt.png');
-    background-repeat:no-repeat;
-    background-position:top;
-  }
-
-  h1 {
-    @include callOut($weight: 600, $size: em(35px));
-    width: 50%;
-    margin: $center;
-    padding-top: 80px;
-  }
-
-  .smallImg {
-    position: relative;
-    top:70px;
-    margin-bottom: 30px;
-  }
-
-  .sectionA{
-    @include container();
-    flex-basis: 100%;
-    height: 500px;
-  }
-
-  .sectionB {
-    @include container();
-    flex-basis: 100%;
-    min-height: 200px;
-  }
-
-  .sectionD {
-    @include container();
-    @include flex(33%);
-    cursor: pointer;
-    position: relative;
-  }
-
-  .caseLogo {
-    padding-top:25px;
-    padding-bottom: 15px;
-    width:60%;
-  }
-
-  .twoUpImg {
-    width: 100%;
-    height: 282px;
-  }
-
-  .button {
-    background-color: $lightGreen;
-    width: 50%;
-    padding: em(1px);
-    text-align: center;
-    color: white;
-    cursor: pointer;
-    margin-bottom: 80px;
-  }
-
-  .bottomButton {
-    background-color: $lightGreen;
-    width: 34%;
-    margin: 50px 0 50px 0;
-    padding: em(1px);
-    text-align: center;
-    color: white;
-  }
-
-}
-
-@media only screen and (max-width: 600px) {
-
-  html {
-    -webkit-background-size: auto;
-    -moz-background-size: auto;
-    -o-background-size: auto;
-    background-size: auto;
-    background-image:url('../img/designElementImages/officeAlt.png');
-    background-repeat:no-repeat;
-    background-position:top;
-  }
-
-  .sectionA{
-    @include container();
-    flex-basis: 100%;
-    height: 450px;
-  }
-
-  .sectionB {
-    @include container();
-    flex-basis: 100%;
-    min-height: 300px;
-  }
-
-  .sectionD {
-    @include container();
-    @include flex(50%);
-    cursor: pointer;
-    position: relative;
-  }
-
-  .sectionC {
-    @include container();
-    @include flex(100%);
-    border-bottom: 2px solid white;
-  }
-
-  .smaller {
-    font-size: 10px;
-    padding-bottom: 10px;
-  }
-
-  .caseLogo {
-    padding-top:25px;
-    padding-bottom: 15px;
-    width:60%;
-  }
-
-  a {
-    color: white;
-    text-decoration: none;
-    font-size: 10px;
-  }
-
-  h1 {
-    @include callOut($weight: 600, $size: em(25px));
-    width: 50%;
-    margin: $center;
-    padding-top: 80px;
-  }
-
-  .callOut {
-    @include callOut($color: black, $weight: 400, $size: em(20px));
-  }
-
-  .smallImg {
-    position: relative;
-    top:90px;
-  }
-
-  .button {
-    background-color: $lightGreen;
-    width: 50%;
-    padding: em(1px);
-    text-align: center;
-    color: white;
-    cursor: pointer;
-    margin-bottom: 80px;
-  }
-}
-
+@import "tablet";
+@import "mobile";
 
 
 
