@@ -82,8 +82,7 @@
 
     <div class="sectionB grey">
         <div class="textOnly">
-            <h1>We're always looking for more <br>
-                good people.</h1>
+            <h1>We're always looking for more good people.</h1>
             <div class="button"><p>Join Our Team</p></div>
         </div>
     </div>
@@ -138,10 +137,11 @@
     <div class="sectionD" ng-controller="employeeController">
         <div class="sectionD" ng-repeat="employee in employees | limitTo: limitLength">
 
-            <img class="empImg" src="img/employee_images/{{employee.image}}">
-                <span class="textContent">
-                     <span>{{employee.name.first +" "+employee.name.last + " " + employee.position}}</span>
-                </span>
+            <img class="empImg" src="img/employee_images/{{employee.image}}" ng-class="{visibility: hover}" ng-mouseenter="hover = true" ng-mouseleave="hover = false">
+                <div class="textContent">
+                    <h3>{{employee.name.first +" "+employee.name.last}}</h3>
+                       <h4>{{employee.position}}</h4>
+                </div>
 
         </div>
 
