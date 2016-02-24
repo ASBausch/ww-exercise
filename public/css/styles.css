@@ -233,8 +233,13 @@ p {
   text-align: center;
   color: white; }
 
-.bottom {
-  padding: 60px 0 60px 0; }
+.bottomButton {
+  background-color: #35C0B1;
+  width: 20%;
+  margin: 50px 0 50px 0;
+  padding: 0.0625em;
+  text-align: center;
+  color: white; }
 
 /* footer */
 footer {
@@ -253,3 +258,45 @@ footer {
   background-color: #2eab9c;
   z-index: -1;
   text-align: center; }
+
+@media only screen and (max-width: 868px) {
+  .sectionD {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    flex-basis: 33%;
+    flex-flow: row wrap;
+    cursor: pointer;
+    position: relative; }
+  .bottomButton {
+    background-color: #35C0B1;
+    width: 34%;
+    margin: 50px 0 50px 0;
+    padding: 0.0625em;
+    text-align: center;
+    color: white; } }
+
+@media only screen and (max-width: 600px) {
+  .sectionD {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    flex-basis: 50%;
+    flex-flow: row wrap;
+    cursor: pointer;
+    position: relative; }
+  .sectionC {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    flex-basis: 100%;
+    flex-flow: row wrap; } }

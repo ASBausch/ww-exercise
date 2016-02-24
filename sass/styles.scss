@@ -252,18 +252,25 @@ p {
   color: white;
 }
 
+.bottomButton {
+  background-color: $lightGreen;
+  width: 20%;
+  margin: 50px 0 50px 0;
+  padding: em(1px);
+  text-align: center;
+  color: white;
+}
+
+
 //button placement
 
-.bottom {
-  padding: 60px 0 60px 0;
-}
 
 /* footer */
 
 footer {
   background-image: url('../img/designElementImages/footerpattern.png');
   height: 80px;
-  width:100%
+  width:100%;
 }
 
 
@@ -279,6 +286,43 @@ footer {
   background-color: $darkGreen;
   z-index: -1;
   text-align: center;
+}
+
+//media queries
+
+//tablet
+
+@media only screen and (max-width: 868px) {
+  .sectionD {
+    @include container();
+    @include flex(33%);
+    cursor: pointer;
+    position: relative;
+  }
+
+  .bottomButton {
+    background-color: $lightGreen;
+    width: 34%;
+    margin: 50px 0 50px 0;
+    padding: em(1px);
+    text-align: center;
+    color: white;
+  }
+
+}
+
+@media only screen and (max-width: 600px) {
+  .sectionD {
+    @include container();
+    @include flex(50%);
+    cursor: pointer;
+    position: relative;
+  }
+
+  .sectionC {
+    @include container();
+    @include flex(100%)
+  }
 
 }
 
