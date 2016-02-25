@@ -6,12 +6,11 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300, 400 ,600 ,700, 800' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
-    <script src="vendors/angular.js"></script>
+    <script src="vendors/angular.min.js"></script>
     <script src="app.js"></script>
 </head>
 <body>
 
-<!--background image is attached to the html element-->
 <header>
     <div>
         <img class="logo" src="img/designElementImages/wwlogo.png">
@@ -23,7 +22,7 @@
             </ul>
     </div>
 </header>
-
+<!--hero section-->
 <main>
     <div class="container">
     <div class="sectionA">
@@ -34,7 +33,7 @@
         </h1>
     </div>
     </div>
-
+<!--first content-->
     <div class="sectionB">
         <div class="textAnd">
             <h2>OUR PHILOSOPHY</h2>
@@ -49,7 +48,7 @@
             </div>
         </div>
     </div>
-
+<!--case studies-->
     <div class="sectionC lgtGreen">
         <div class="sectionC">
             <img class="twoUpImg" src="img/contentImages/stadium.png">
@@ -93,38 +92,37 @@
             <hr width = "18%">
         </div>
 
-        <!--all closed on load need to expand and orient arrow properly-->
-
-        <div id="bar1" class="firstDrop" ng-click="onBarClick('bar1')">
-            <p>WORK HARD
-                <img class="triangle" src='img/designElementImages/triangle.png'>
+<!--About accordion-->
+    <div id="bar1" class="firstDrop" ng-click="onBarClick('bar1')">
+        <p>WORK HARD
+            <img class="triangle" src='img/designElementImages/triangle.png'>
+        </p>
+    </div>
+        <div class="firstDrop firstDropContent" ng-show="isActive('bar1')"  ng-class="{active: isActive('bar1')}">
+            <p>For those who have seen the Earth from space, and for the hundreds and perhaps thousands more who will,
+                the experience most certainly changes your perspective. The things that we share in our world are far
+                more valuable than those which divide us.
             </p>
         </div>
-            <div class="firstDrop firstDropContent" ng-show="isActive('bar1')"  ng-class="{active: isActive('bar1')}">
-                <p>For those who have seen the Earth from space, and for the hundreds and perhaps thousands more who will,
-                    the experience most certainly changes your perspective. The things that we share in our world are far
-                    more valuable than those which divide us.
-                </p>
-            </div>
-        <div id="bar2" class="firstDrop" ng-click="onBarClick('bar2')">
-            <p>SUPPORT OUR TEAM <img class="triangle" src="img/designElementImages/triangle.png"></p>
+    <div id="bar2" class="firstDrop" ng-click="onBarClick('bar2')">
+        <p>SUPPORT OUR TEAM <img class="triangle" src="img/designElementImages/triangle.png"></p>
+    </div>
+        <div class="firstDrop firstDropContent" ng-show="isActive('bar2')"  ng-class="{active: isActive('bar2')}">
+            <p>There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally, it is a task
+                to occupy the generations. And no matter how much progress one makes, there is always the thrill of just beginning.
+                Buy why, some say, the moon? Why choose this as our goal? And they may as well ask why climb the highest mountain?
+            </p>
         </div>
-            <div class="firstDrop firstDropContent" ng-show="isActive('bar2')"  ng-class="{active: isActive('bar2')}">
-                <p>There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally, it is a task
-                    to occupy the generations. And no matter how much progress one makes, there is always the thrill of just beginning.
-                    Buy why, some say, the moon? Why choose this as our goal? And they may as well ask why climb the highest mountain?
-                </p>
-            </div>
-        <div id="bar3" class="firstDrop" ng-click="onBarClick('bar3')">
-            <p>BUILD COOL STUFF <img class="triangle" src="img/designElementImages/triangle.png"></p>
+    <div id="bar3" class="firstDrop" ng-click="onBarClick('bar3')">
+        <p>BUILD COOL STUFF <img class="triangle" src="img/designElementImages/triangle.png"></p>
+    </div>
+        <div class="firstDrop firstDropContent" ng-show="isActive('bar3')"  ng-class="{active: isActive('bar3')}">
+            <p>Curious that we spend more time congratulating people who have succeeded than encouraging people who have not.
+                NASA is not about the ‘Adventure of Human Space Exploration’…We won’t be doing it just to get out there in space
+                – we’ll be doing it because the things we learn out there will be making life better for a lot of people who won’t
+                be able to go.
+            </p>
         </div>
-            <div class="firstDrop firstDropContent" ng-show="isActive('bar3')"  ng-class="{active: isActive('bar3')}">
-                <p>Curious that we spend more time congratulating people who have succeeded than encouraging people who have not.
-                    NASA is not about the ‘Adventure of Human Space Exploration’…We won’t be doing it just to get out there in space
-                    – we’ll be doing it because the things we learn out there will be making life better for a lot of people who won’t
-                    be able to go.
-                </p>
-            </div>
     </div>
 
     <div class="sectionC">
@@ -134,7 +132,7 @@
         </div>
     </div>
 
-    <!--still needs hover and title text-->
+<!--Employee Grid-->
     <div class="sectionD" ng-controller="employeeController">
         <div class="sectionD" ng-repeat="employee in employees | limitTo: limitLength">
 

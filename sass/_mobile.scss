@@ -50,8 +50,7 @@
 
 
   h1 {
-    @include callOut($weight: 600, $size: em(25px));
-    width: 50%;
+    @include callOut($weight: 600, $size: em(25px), $width:50%);
     margin: 0 auto;
     padding-top: 80px;
   }

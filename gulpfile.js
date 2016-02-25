@@ -1,10 +1,6 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 
-//gulp test
-gulp.task('hello', function() {
-    console.log('Hello Amanda');
-});
 
 //compile Sass
 gulp.task('sass', function() {

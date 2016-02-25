@@ -1,5 +1,6 @@
 /* brand fonts */
 /* brand colors */
+/* background colors */
 .lgtGreen {
   background-color: #35C0B1; }
 
@@ -27,8 +28,7 @@ html {
   -moz-background-size: auto;
   -o-background-size: auto;
   background-size: auto;
-  background-repeat: no-repeat;
-  background-position: top;
+  background: no-repeat, top;
   background-image: url("../img/designElementImages/office.png"); }
 
 .container {
@@ -90,6 +90,7 @@ html {
   flex-basis: 100%;
   flex-flow: row wrap; }
 
+/* text elements */
 a {
   color: white;
   text-decoration: none; }
@@ -111,7 +112,7 @@ ul {
   text-align: center;
   color: black;
   font-size: 1.5em;
-  font-family: 400;
+  font-family: "Open Sans", sans-serif;
   font-weight: 400;
   width: 100%; }
 
@@ -143,8 +144,7 @@ h3 {
   margin: 0 auto;
   position: relative;
   top: 50%;
-  transform: translateY(-50%);
-  text-align: center; }
+  transform: translateY(-50%); }
 
 h4 {
   text-align: center;
@@ -157,7 +157,6 @@ h4 {
   position: relative;
   top: 47%;
   transform: translateY(-50%);
-  text-align: center;
   text-transform: uppercase; }
 
 p {
@@ -267,8 +266,7 @@ footer {
     -moz-background-size: auto;
     -o-background-size: auto;
     background-size: auto;
-    background-repeat: no-repeat;
-    background-position: top;
+    background: no-repeat, top;
     background-image: url("../img/designElementImages/officeAlt.png"); }
   h1 {
     text-align: center;
@@ -276,7 +274,6 @@ footer {
     font-size: 2.1875em;
     font-family: "Open Sans", sans-serif;
     font-weight: 600;
-    width: 100%;
     width: 50%;
     margin: 0 auto;
     padding-top: 80px; }
@@ -344,8 +341,7 @@ footer {
     -moz-background-size: auto;
     -o-background-size: auto;
     background-size: auto;
-    background-repeat: no-repeat;
-    background-position: top;
+    background: no-repeat, top;
     background-image: url("../img/designElementImages/officeAlt.png"); }
   .sectionA {
     display: -webkit-flex;
@@ -403,7 +399,6 @@ footer {
     font-size: 1.5625em;
     font-family: "Open Sans", sans-serif;
     font-weight: 600;
-    width: 100%;
     width: 50%;
     margin: 0 auto;
     padding-top: 80px; }
